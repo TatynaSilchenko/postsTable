@@ -1,0 +1,14 @@
+.headerName {
+    color: white;
+    background: #38395D;
+}
+
+tbody {
+    /*color:#686F7A;*/
+    color: #cecece;
+}
+
+tr:hover {
+    color: white !important;
+    background-color: rgba(68, 68, 148, 0.42) !important;
+}
