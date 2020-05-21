@@ -11,6 +11,7 @@ const Main = ({currentPage, postsPerPage, posts, ...props}) => {
     //Get posts
     useEffect(() => {
         props.getPostsData();
+        // eslint-disable-next-line
     },[]);
 
     //Get current posts

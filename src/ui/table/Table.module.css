@@ -20,7 +20,6 @@
 tbody {
     color: #cecece;
 }
-
 tr:hover {
     color: white !important;
     background-color: rgba(68, 68, 148, 0.42) !important;
