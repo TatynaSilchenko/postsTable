@@ -1,14 +1,7 @@
-.headerName {
-    color: white;
-    background: #38395D;
+.userName{
+  color: #525686;
+}
+.title{
+  color:#7175B4;
 }
 
-tbody {
-    /*color:#686F7A;*/
-    color: #cecece;
-}
-
-tr:hover {
-    color: white !important;
-    background-color: rgba(68, 68, 148, 0.42) !important;
-}
