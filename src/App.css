@@ -35,6 +35,12 @@
     }
 }
 @media screen and (max-width: 430px){
+    .table{
+        width:98%!important;
+        margin: 5px 5px 0 5px;
+    }
+}
+@media screen and (max-width: 430px){
     .page-item .page-link{
         padding: .3rem .5rem;
     }

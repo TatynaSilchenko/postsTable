@@ -2,20 +2,20 @@ import React from "react";
 import s from "./Table.module.css";
 import *as ReactBootStrap from "react-bootstrap";
 import {useSelector} from "react-redux";
-import "../../App.css"
+import "../../App.css";
 
 const Table = ({getUsers, ...props}) => {
 
     //Get column name from state
     const columns = useSelector(state => state.table.columns);
 
-
     //set columns
     const headerClassSet = (key) => {
         if (key === "username") return `${s.headerName} ${s.userNameColumn}`;
         if (key === "id") return `${s.idColumn} ${s.headerName}`;
+
         return s.headerName;
-    }
+    };
 
     const headerColumns = () => Object.keys(columns).map(key => {
         return <th key={key}
@@ -36,12 +36,12 @@ const Table = ({getUsers, ...props}) => {
         props.setUsername(item.username)
     };
 
-    //make table
+    //create table
     const rows = () => {
         return props.posts.map((item) => row(item))
     };
     const row = (item) => {
-        return <tr key={item.id}>
+        return <tr key={item.id} className={s.row}>
             {Object.keys(columns).map((key, i) => <td key={key}
                                                       className={key === "title" ? s.alignItemLeft : null}
                                                       onClick={e => key === "title" && getMoreInfo(e, item)}>
@@ -52,7 +52,7 @@ const Table = ({getUsers, ...props}) => {
         <div className={s.tableWrapper}>
             <ReactBootStrap.Table striped bordered hover>
                 <thead>
-                <tr className={s.headerRow}>{headerColumns()}</tr>
+                <tr>{headerColumns()}</tr>
                 </thead>
                 <tbody>
                 {rows()}

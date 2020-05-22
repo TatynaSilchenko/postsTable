@@ -12,7 +12,7 @@ const Main = ({currentPage, postsPerPage, posts, ...props}) => {
     useEffect(() => {
         props.getPostsData();
         // eslint-disable-next-line
-    },[]);
+    }, []);
 
     //Get current posts
     const lastPostIndex = currentPage * postsPerPage;
@@ -39,7 +39,8 @@ const Main = ({currentPage, postsPerPage, posts, ...props}) => {
                     paginate={paginate}/>
 
     </>
-}
+};
+
 let mapStateToProps = (state) => {
     return {
         posts: state.table.posts,

@@ -4,6 +4,8 @@
     background: #38395D;
 }
 .tableWrapper{
+    position: relative;
+    box-sizing: border-box;
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -25,9 +27,10 @@ tr:hover {
     background-color: rgba(68, 68, 148, 0.42) !important;
 }
 .alignItemLeft{
-    display: flex;
-    justify-content: flex-start;
     text-align: left;
     padding: 10px;
+    width:300px!important;
 }
-
+.table td,.table th{
+    width:300px;
+}

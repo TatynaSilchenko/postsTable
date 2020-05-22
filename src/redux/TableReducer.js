@@ -8,19 +8,19 @@ const SET_POSTS_TOTAL_COUNT = "TABLE/SET_POSTS_TOTAL_COUNT";
 const initialState = {
     columns: {
         id: {
-            key: 'id',
-            label: 'ID',
+            key: "id",
+            label: "ID",
         },
         title: {
-            key: 'title',
-            label: 'Title',
+            key: "title",
+            label: "Title",
         },
         username: {
-            key: 'username',
-            label: 'Author',
+            key: "username",
+            label: "Author",
         },
     },
-    posts:[],
+    posts: [],
     isLoading: false,
     currentPage: 1,
     postsPerPage: 10
@@ -51,15 +51,15 @@ export const getPostsData = () => async (dispatch) => {
         Promise.all([await dataApi.getUsers(), await dataApi.getPosts()]).then((values) => {
             const users = values[0];
             const posts = values[1];
-            const postsInfo=posts.map(p=>{
-                return {...p,username:users.filter(u=>u.id===p.userId)[0].username}
-            })
-            dispatch(setPosts(postsInfo))
+            const postsInfo = posts.map(p => {
+                return {...p, username: users.filter(u => u.id === p.userId)[0].username}
+            });
+            dispatch(setPosts(postsInfo));
         });
-        dispatch(setIsLoading(false))
+        dispatch(setIsLoading(false));
     } catch (e) {
-        throw new Error(e)
+        throw new Error(e);
     }
 };
 
-export default TableReducer
+export default TableReducer;
