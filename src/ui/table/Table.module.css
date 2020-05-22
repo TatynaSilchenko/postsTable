@@ -1,36 +1,58 @@
-
 .headerName {
     color: white;
     background: #38395D;
 }
-.tableWrapper{
+
+.tableWrapper {
     position: relative;
     box-sizing: border-box;
-    display:flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 85%;
     overflow: overlay;
     margin-bottom: 20px;
 }
-.userNameColumn{
-    width:20%;
+
+.userNameColumn {
+    width: 20%;
 }
-.idColumn{
-    width:10%;
+
+.idColumn {
+    width: 10%;
 }
+
+.titleColumn {
+    min-width: 70%;
+}
+
 tbody {
     color: #cecece;
 }
+
 tr:hover {
     color: white !important;
     background-color: rgba(68, 68, 148, 0.42) !important;
 }
-.alignItemLeft{
+
+.alignItemLeft {
     text-align: left;
     padding: 10px;
-    width:300px!important;
+    width: 300px !important;
 }
-.table td,.table th{
-    width:300px;
+
+.react-bootstrap-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.react-bootstrap-table table {
+    table-layout: auto !important
+}
+
+.table th,
+.table td {
+    white-space: nowrap;
 }

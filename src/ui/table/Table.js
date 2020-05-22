@@ -13,8 +13,7 @@ const Table = ({getUsers, ...props}) => {
     const headerClassSet = (key) => {
         if (key === "username") return `${s.headerName} ${s.userNameColumn}`;
         if (key === "id") return `${s.idColumn} ${s.headerName}`;
-
-        return s.headerName;
+        if (key === "title") return `${s.titleColumn} ${s.headerName}`;
     };
 
     const headerColumns = () => Object.keys(columns).map(key => {
